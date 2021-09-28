@@ -1,0 +1,24 @@
+<table id="list" class="form-style">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">userid</th>
+        <th scope="col">title</th>
+        <th scope="col">description</th>
+        <th scope="col">track</th>
+        <th scope="col">category</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%listList.forEach(list =>{%>
+        <tr>
+            <th scope="row"><%=list._id %></th>
+            <td><%=list.userid %></td>
+            <td><%=list.title %></td>
+            <td><%=list.description %></td>
+            <td><%=list.track %></td>
+            <td><%=list.category %></td>
+        </tr>
+    <%})%>
+    </tbody>
+</table>
