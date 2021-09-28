@@ -1,0 +1,26 @@
+{
+  "name": "fdoc-be-4-yogesh312",
+  "version": "1.0.0",
+  "description": "## TODO List with Authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exponentsoftware/fdoc-be-4-yogesh312.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exponentsoftware/fdoc-be-4-yogesh312/issues"
+  },
+  "homepage": "https://github.com/exponentsoftware/fdoc-be-4-yogesh312#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jwt-then": "^1.0.1",
+    "mongoose": "^6.0.8"
+  }
+}
