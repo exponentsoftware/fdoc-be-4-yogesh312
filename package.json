@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/exponentsoftware/fdoc-be-4-yogesh312#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",

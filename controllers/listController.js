@@ -4,21 +4,26 @@ const List = mongoose.model("List");
 const User = mongoose.model("User");
 
 exports.createList = async (req, res) => {
-  const { title,description, track, category} = req.body;
-  const userId = req.user.id;
+  const { title,description, category} = req.body;
+  const userId = req.payload.id;
   const listExist = await List.findOne({ title });
   if (listExist) throw "form with that name already exists!";
   const list = new List({
     userId,
     title, 
     description,
-    track, 
+     
     category
   });
   await list.save();
   res.json({message: "list created!",
   });
 };
+exports.createLists =async (req, res) => {
+    res.render('./submitlist',{
+      title:"submit list"
+    });
+}
 
 
 

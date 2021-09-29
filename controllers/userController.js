@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const User = mongoose.model("User");
 const sha256 = require("js-sha256");
 const jwt = require("jwt-then");
+const cookieParser = require('cookie-parser')
+
 
 exports.register = async (req, res) => {
   const { name, email, password, phone, role } = req.body;
@@ -41,11 +43,13 @@ exports.login = async (req, res) => {
   if (!user) throw "Email and Password did not match.";
 
   const token = await jwt.sign({ id: user.id }, process.env.SECRET);
+  res.cookie('auth',token);
 
   // res.json({
   //   message: "User logged in successfully!",
   //   token,
   // });
+
   res.render('listHome',{
     title:"list Home"
   })
